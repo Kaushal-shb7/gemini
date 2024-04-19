@@ -1,0 +1,245 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navigation a, .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .social-media {
+    display: flex;
+  }
+  
+  .hero {
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .subheading {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+  
+  .scroll-down {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: white;
+  }
+  
+  .sidebar a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 10px 20px;
+  }
+
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #000; /* Assuming a dark theme based on the screenshot */
+    color: #fff;
+  }
+  
+  .section-number {
+    font-size: 9em;
+    opacity: 0.1;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+  }
+  
+  .section-content {
+    width: 50%;
+    padding-right: 50px;
+  }
+  
+  .section-content h2 {
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 1em;
+  }
+  
+  .section-content h3 {
+    font-size: 2em;
+    margin: 0.5em 0;
+  }
+  
+  .section-content p {
+    font-size: 1em;
+    line-height: 1.6em;
+  }
+  
+  .read-more-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .section-image {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .section-image img {
+    width: 55%;
+    display: block; /* remove extra space below the image */
+  }
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+    }
+  
+    .section-content, .section-image {
+      width: 100%;
+    }
+  
+    .section-number {
+      font-size: 5em;
+      left: 20px;
+      top: 20px;
+    }
+  }
+  .gear-section {
+    background: #000000; /* Assuming a light background for this section */
+    color: #f6f1f1;
+  }
+  
+  /* Keep the rest of the styles the same as the .content-section, .section-number, etc., 
+     but adjust the colors and backgrounds to fit the new section. */
+  
+  .gear-section .section-content h2 {
+    color: #333; /* Darker color for contrast */
+  }
+  
+  .gear-section .read-more-link {
+    color: #333; /* Darker color for contrast */
+  }
+  
+  /* Make sure to adjust the section number to fit this section's design */
+  .gear-section .section-number {
+    color: rgba(0, 0, 0, 0.1); /* Lighter color for the number since it's a light background */
+  }
+  .map-timing-section {
+    background: #000; /* Assuming a dark background for this section */
+    color: #fff;
+  }
+  
+  /* Rest of the styles would remain consistent with .content-section, .section-number, etc. */
+  
+  .map-timing-section .section-content h2 {
+    color: #ccc; /* Adjust color for better visibility */
+  }
+  
+  .map-timing-section .read-more-link {
+    color: #fff; /* Adjust color for better visibility */
+  }
+  
+  /* Adjust the section number color to be visible on the background */
+  .map-timing-section .section-number {
+    color: rgba(255, 255, 255, 0.1); /* Light color for the number due to dark background */
+  }
+  footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 0.9em;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 80px;
+  }
+  
+  .footer-section h3, .footer-section h4 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    opacity: 1;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .footer-section {
+      margin-bottom: 20px;
+    }
+  
+    .footer-bottom {
+      font-size: 0.8em;
+    }
+  }
+     
