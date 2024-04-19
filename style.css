@@ -242,4 +242,53 @@ body, html {
       font-size: 0.8em;
     }
   }
-     
+  .about-us-section {
+    background-color: #8E7AB5; /* Primary theme color */
+    color: #EEA5A6; /* Contrast color for text */
+    padding: 50px 0;
+    line-height: 1.6;
+  }
+  
+  .about-us-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .about-us-section h2 {
+    color: #fff; /* White color for main heading */
+    margin-bottom: 20px;
+  }
+  
+  .about-us-section p {
+    margin-bottom: 15px;
+    color: #fff; /* Adjust as necessary for readability */
+  }
+  
+  .about-us-section .learn-more-button {
+    display: inline-block;
+    background-color: #B784B7; /* Secondary theme color */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-us-section .learn-more-button:hover {
+    background-color: #E493B3; /* Tertiary theme color */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .about-us-section .container {
+      padding: 0 10px;
+    }
+  
+    .about-us-section h2 {
+      font-size: 1.5rem; /* Adjust size for smaller screens */
+    }
+  }
+  

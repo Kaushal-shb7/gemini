@@ -10,4 +10,9 @@ document.querySelectorAll('.read-more-link').forEach(link => {
       }
     });
   });
-      
+  document.querySelector('.learn-more-button').addEventListener('click', function (e) {
+    e.preventDefault();
+    const learnMoreSection = document.querySelector(this.getAttribute('href'));
+    learnMoreSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  
