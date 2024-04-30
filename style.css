@@ -1,290 +1,70 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: absolute;
-    width: 98%;
-    background-color: rgba(38, 38, 38);
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
     color: white;
-    z-index: 10;
-  }
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  logo:hover{
-    cursor:pointer;
-  }
-  
-  .navigation a, .social-media a {
-    color: white;
-    text-decoration: none;
-    margin: 10px 10px;
-  }
-  
-  .social-media {
-    display: flex;
-  }
-  
-  .hero {
-    height: 100vh;
-    background-image: url('home.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .hero h1 {
-    font-size: 3em;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-  }
-  
-  .subheading {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-  }
-  
-  .scroll-down {
-    font-size: 1.2em;
+    font-size: 16px;
     cursor: pointer;
-  }
-  
-  .sidebar {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    color: white;
-  }
-  
-  .sidebar a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    margin: 10px 20px;
-  }
+    transition: background-color 0.3s;
+}
 
-  .content-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background: #000; /* Assuming a dark theme based on the screenshot */
-    color: #fff;
-  }
-  
+button:hover {
+    background-color: #0097a7;
+}
 
-  .section-content {
-    width: 50%;
-    padding-right: 50px;
-  }
-  
-  .section-content h2 {
-    text-transform: uppercase;
-    color: #aaa;
-    font-size: 1em;
-  }
-  
-  .section-content h3 {
-    font-size: 2em;
-    margin: 0.5em 0;
-  }
-  
-  .section-content p {
-    font-size: 1em;
-    line-height: 1.6em;
-  }
-  
-  .read-more-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
-  .section-image {
-    width: 50%;
+/* Progress Tracker Styling */
+#progress-tracker {
+    margin: 20px;
     padding: 20px;
-  }
-  
-  .section-image img {
-    width: 55%;
-    display: block; /* remove extra space below the image */
-  }
-  
-  /* Adjustments for responsiveness */
-  @media (max-width: 768px) {
-    .content-section {
-      flex-direction: column;
-    }
-  
-    .section-content, .section-image {
-      width: 100%;
-    }
-  
-    .section-number {
-      font-size: 5em;
-      left: 20px;
-      top: 20px;
-    }
-  }
-  .gear-section {
-    background: #000000; /* Assuming a light background for this section */
-    color: #f6f1f1;
-  }
-  
-  /* Keep the rest of the styles the same as the .content-section, .section-number, etc., 
-     but adjust the colors and backgrounds to fit the new section. */
-  
-  .gear-section .section-content h2 {
-    color: #333; /* Darker color for contrast */
-  }
-  
-  .gear-section .read-more-link {
-    color: #333; /* Darker color for contrast */
-  }
-  
-  /* Make sure to adjust the section number to fit this section's design */
-  .gear-section .section-number {
-    color: rgba(0, 0, 0, 0.1); /* Lighter color for the number since it's a light background */
-  }
-  .map-timing-section {
-    background: #000; /* Assuming a dark background for this section */
-    color: #fff;
-  }
-  
-  /* Rest of the styles would remain consistent with .content-section, .section-number, etc. */
-  
-  .map-timing-section .section-content h2 {
-    color: #ccc; /* Adjust color for better visibility */
-  }
-  
-  .map-timing-section .read-more-link {
-    color: #fff; /* Adjust color for better visibility */
-  }
-  
-  /* Adjust the section number color to be visible on the background */
-  .map-timing-section .section-number {
-    color: rgba(255, 255, 255, 0.1); /* Light color for the number due to dark background */
-  }
-  footer {
-    background: #000;
-    color: #fff;
-    padding: 40px 0;
-    font-size: 0.9em;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 0 80px;
-  }
-  
-  .footer-section h3, .footer-section h4 {
-    color: #fff;
-    margin-bottom: 15px;
-  }
-  
-  .footer-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li a {
-    color: #fff;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-  
-  .footer-section ul li a:hover {
-    opacity: 1;
-  }
-  
-  .footer-bottom {
+    background-color: #f5f5f5;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    width: 30%; /* Adjust based on actual progress */
+    background-color: #00bcd4;
+    border-radius: 5px;
+}
+
+/* Breathing Exercise Styling */
+#breathing-exercise {
     text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-      padding: 0 20px;
-    }
-    
-    .footer-section {
-      margin-bottom: 20px;
-    }
-  
-    .footer-bottom {
-      font-size: 0.8em;
-    }
-  }
-  .about-us-section {
-    background-color: #8E7AB5; /* Primary theme color */
-    color: #EEA5A6; /* Contrast color for text */
-    padding: 50px 0;
-    line-height: 1.6;
-  }
-  
-  .about-us-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  .about-us-section h2 {
-    color: #fff; /* White color for main heading */
-    margin-bottom: 20px;
-  }
-  
-  .about-us-section p {
-    margin-bottom: 15px;
-    color: #fff; /* Adjust as necessary for readability */
-  }
-  
-  .about-us-section .learn-more-button {
-    display: inline-block;
-    background-color: #B784B7; /* Secondary theme color */
-    color: #fff;
+    padding: 40px;
+    background-color: #e8f5e9;
+}
+
+.breathing-animation img {
+    width: 100px;
+    height: auto;
+}
+
+/* Community Forum Styling */
+#community-forum {
+    background-color: #e3f2fd;
+    padding: 20px;
+    text-align: center;
+}
+
+.forum-excerpt a {
+    color: #00bcd4;
     text-decoration: none;
     padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .about-us-section .learn-more-button:hover {
-    background-color: #E493B3; /* Tertiary theme color */
-  }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 768px) {
-    .about-us-section .container {
-      padding: 0 10px;
-    }
-  
-    .about-us-section h2 {
-      font-size: 1.5rem; /* Adjust size for smaller screens */
-    }
-  }
-  
+    border-radius: 5px;
+    border: 1px solid #00bcd4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.forum-excerpt a:hover {
+    background-color: #00bcd4;
+    color: white;
+}
+
